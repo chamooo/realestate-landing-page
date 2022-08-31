@@ -1,0 +1,283 @@
+
+.main-block {
+    padding-bottom: 110px;
+    // .main-block__container
+    &__container {
+        position: relative;
+        padding-top: 183px;
+        &::after {
+            content: "";
+            background-color: #BDCCFF;
+            position: absolute;
+            width: 200%;
+            top: 0;
+            left: 67%;
+            height: 100%;
+        }
+    }
+}
+
+.body-main-block {
+    position: relative;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: flex-start;
+
+    // .body-main-block__content
+    &__content {
+        flex: 0 1 50%;
+        padding-top: 40px;
+    }
+
+    // .body-main-block__slider
+    &__slider {
+        flex: 0 1 50%;
+        min-width: 0;
+    }
+
+    &__arrows {
+        position: absolute;
+        bottom: -52px;
+        right: 0;
+        display: flex;
+        align-items: center;
+        gap: 40px;
+    }
+
+    &__arrow::after {
+        display: none;
+    }
+
+    &__arrow.swiper-button-prev, 
+    &__arrow.swiper-button-next {
+        position: static;
+        background: url('/img/icons/arrowR.svg') 0 0 / 103% no-repeat;
+        height: 19px;
+        width: 11px;
+        transition: all 0.3s ease 0s;
+        &:hover {
+            opacity: 0.4;
+        }
+    }
+}
+.swiper-button-prev {
+    transform: rotate(-180deg);
+    
+}
+
+
+.slider-main-block {
+    &__slide {
+        padding-bottom: 95%;
+        position: relative;
+        
+    }
+    &__slide img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+.content-main-block {
+    position: relative;
+    z-index: 9;
+
+    &__body {
+        padding: 0px 80px 0px 0px;
+    }
+    &__subtitle {
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 29px;
+        color: #FF9900;
+        margin: 0px 0px 20px 0px;
+    }
+    // .content-main-block__title
+    &__title {
+        font-weight: 800;
+        font-size: 54px;
+        line-height: 73px;
+        color: #000000;
+        margin: 0px 0px 20px 0px;
+
+    }
+
+    // .content-main-block__text
+
+    &__text {
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 23px;
+        letter-spacing: 0.01em;
+        color: #31353B;
+        margin: 0px 0px 45px 0px;
+
+    }
+}
+
+.form-main-block {
+    @media (min-width: ($md1 + px)) {
+        margin-right: -189px;
+    }
+    
+    display: flex;
+    box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.03), 0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0227778), 0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0182222), 0px 20px 13px rgba(0, 0, 0, 0.015), 0px 8.14815px 6.51852px rgba(0, 0, 0, 0.0117778), 0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00722222);
+    background: #fff url('/img/icons/house.svg') 33px 34px no-repeat;
+    
+
+    // .form-main-block__input
+    &__input {
+        height: 84px;
+        padding: 0px 0px 0px 74px;
+        background-color: transparent;
+        width: 100%;
+        flex: 1 1 auto;
+        border: 1px solid #DADADA;
+        font-size: 24px;
+        color: #31353B;
+        &::placeholder {    
+            font-weight: 400;
+            font-size: 17px;
+            letter-spacing: 0.01em;
+            color: #31353B;
+            opacity: 0.3;
+        }
+    }
+
+
+    // .form-main-block__button
+    &__button {
+        height: 86px;
+        z-index: 2;
+        cursor: pointer;
+        background-color: #F85A47;
+        padding: 5px 15px;
+        border: none;
+        flex: 0 0 189px;
+        width: 189px;
+        font-weight: 700;
+        font-size: 17px;
+        line-height: 23px;
+        letter-spacing: 0.01em;
+        color: #FFFFFF;
+        transition: all 0.2s ease 0s;
+        &:hover {
+            background-color: #e1402e;
+        }
+    }
+}
+
+.partners-main-block {
+    // .partners-main-block__label
+    &__label {
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 23px;
+        letter-spacing: 0.01em;
+        color: #31353B;
+        margin-bottom: 25px;
+    }
+
+    // .partners-main-block__items
+
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        // column-gap: 50px;
+        justify-content: space-between;
+        max-width: 65%;
+    }
+
+    // .partners-main-block__item
+
+    &__item {
+        &img {
+            max-width: 100%;
+        }
+    }
+}
+
+@media (max-width:($md1+px)){
+    .main-block__container {
+        padding-top: 120px;
+        padding-bottom: 30px;
+    }
+    .body-main-block {
+        display: block;
+    }
+    .content-main-block {
+        margin-bottom: 50px;
+    }
+    .main-block__body {
+        margin-bottom: 40px;
+    }
+    .partners-main-block__items {
+        position: relative;
+        z-index: 2;
+        max-width: none;
+        column-gap: 25px;
+        row-gap: 15px;
+
+    }
+    .content-main-block__body {
+        padding-right: 0;
+    }
+
+}
+@media (max-width: ($md3 + px)){
+    .content-main-block__title {
+        font-weight: 800;
+        font-size: 30px;
+        line-height: 120%;
+        color: #000000;
+        margin: 0px 0px 20px 0px;
+    }
+    .partners-main-block__items {
+        justify-content: center;
+    }
+    .content-main-block__text {
+        font-size: 15px;
+    }
+    .form-main-block {
+        display: block;
+        overflow: hidden;
+        background: #fff url('/img/icons/house.svg') 33px 23px no-repeat;
+        &__button {
+            width: 100%;
+            height: 60px;
+        }
+        &__input {
+            outline: none;
+            display: block;
+            height: 60px;
+            &::placeholder {
+                font-size: 16px;
+            }
+        }
+    }
+} 
+@media (max-width: ($md4 + px)){ 
+    .form-main-block {
+        background: #fff;
+    }
+    .form-main-block {
+        &__input {
+            padding: 0 15px;   
+        }
+    }
+}
+
+@media (max-width: ($md2+px)){
+    .main-block {
+        padding-bottom: 70px;
+    }
+}
+@media (max-width: ($md3+px)){
+    .main-block {
+        padding-bottom: 70px;
+    }
+}

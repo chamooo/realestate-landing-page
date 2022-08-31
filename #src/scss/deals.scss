@@ -1,0 +1,201 @@
+.page {
+    // .page__deals
+    &__deals {}
+}
+
+.deals {
+    padding-top: 110px;
+    padding-bottom: 110px;
+
+    // .deals__container
+    &__container {}
+    // .deals__header
+    &__header {}
+    // .deals__tabs
+    &__tabs {}
+}
+
+.header-deals {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 50px;
+    align-items: center;
+    @media (max-width: ($md3+px)){
+        &__link {
+            width: 100%;
+        }
+    }
+    // .header-deals__content
+    &__content {
+        flex: 1 1 auto;
+    }
+    // .header-deals__title
+    &__title {
+        &:not(:last-child) {
+            margin-bottom: 15px;
+        }
+    }
+    &__text {
+        max-width: 470px;
+        line-height: 24px;
+    }
+
+    &__link {
+        background: $btnBg;
+        box-shadow: 0px 100px 80px rgba(248, 90, 71, 0.07), 0px 64.8148px 46.8519px rgba(248, 90, 71, 0.0531481), 0px 38.5185px 25.4815px rgba(248, 90, 71, 0.0425185), 0px 20px 13px rgba(248, 90, 71, 0.035), 0px 8.14815px 6.51852px rgba(248, 90, 71, 0.0274815), 0px 1.85185px 3.14815px rgba(248, 90, 71, 0.0168519);
+        color: #fff;
+        font-size: 17px;
+        line-height: 23px;
+        display: inline-block;
+        text-align: center;
+        padding: 22px 33px;
+        border-radius: 5px;
+        height: 23px;
+        transition: all 0.2s ease 0s;
+        &:hover {
+            background: $btnHvr;
+        }
+    }
+}
+
+.tabs-deals {
+    // .tabs-deals__nav
+    &__nav {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 50px;
+        row-gap: 10px;
+        margin-bottom: 60px;
+    }
+    @media (max-width: ($md3+px)){
+        &__nav {
+            justify-content: center;
+        } 
+    }
+    // .tabs-deals__button
+    &__button {
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+        padding-bottom: 12px;
+        font-size: 19px;
+        line-height: 26px;
+        position: relative;
+        transition: all 0.3s ease 0s;
+
+        &:hover::after {
+            width: 95%;
+        }
+        &:hover {
+            color: $btnBg;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0px;
+            left: 5px;
+            width: 0;
+            height: 1.5px;
+            transition: all 0.3s ease 0s;
+            background: $btnBg;
+        }
+        &.active {
+            color: $btnBg;
+        }
+        &.active::after {
+            width: 95%;
+        }
+    }
+    
+    // .tabs-deals__body
+    &__body {}
+    // .tabs-deals__item
+    &__item {
+        display: none;
+    }
+    &__item.active {
+        display: block;
+    }
+}
+
+.item-tabs {
+    align-items: flex-start;
+    // .item-tabs__items
+    &__items {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+    // .item-tabs__item
+    &__item {
+        position: relative;
+    }
+    // .item-tabs__options
+    &__options {
+        position: absolute;
+        top: 14px;
+        left: 14px;
+        z-index: 2;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+    // .item-tabs__option
+    &__option {
+        border: 1px solid #fff;
+        border-radius: 5px;
+        padding: 6px 12px;
+        background: rgba(0, 0, 0, 0.4);
+        color: #fff;
+        font-size: 12px;
+        transition: all 0.3s ease 0s;
+        &:hover {
+            background: rgba(0, 0, 0, 0.6);
+        }
+    }
+    // .item-tabs__image
+    &__image {
+        display: block;
+        position: relative;
+        padding-bottom: 81%;
+        overflow: hidden;
+    }
+    &__image img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease 0s;
+        &:hover {
+            transform: scale(1.06);
+        }
+    }
+}
+
+
+@media (max-width: ($md2+px)){
+    .deals {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+}
+@media (max-width: ($md3+px)){
+    .deals {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+    .header-deals__title {
+        font-size: 35px;
+    }
+   
+}
+@media (max-width: ($md4+px)){
+    .item-tabs {
+        &__items {
+            grid-template-columns: none;
+        }
+    }
+}

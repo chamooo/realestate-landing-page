@@ -1,0 +1,146 @@
+.page {
+
+    // .page__subscribe
+
+    &__subscribe {
+    }
+}
+.subscribe {
+    padding-top: 110px;
+    padding-bottom: 110px;
+    // .subscribe__container
+
+    &__container {
+    }
+
+    // .subscribe__header
+
+    &__header {
+        text-align: center;
+        margin-bottom: 34px;
+    }
+
+    // .subscribe__title
+
+    &__title {
+        margin-bottom: 11px;
+        
+    }
+
+    // .subscribe__subtitle
+
+    &__subtitle {
+        font-weight: 700;
+        font-size: 19px;
+        line-height: 144.2%;
+        letter-spacing: 0.02em;
+    }
+
+    // .subscribe__form
+
+    &__form {
+        max-width: 686px;
+        margin: 0 auto;
+    }
+}
+.title {
+
+    // .title_center
+
+    &_center {
+    }
+}
+.form-subscribe {
+    gap: 15px;
+    background: #fff;
+    box-shadow: 0px 163px 80px rgba(0, 0, 0, 0.04), 0px 105.648px 46.8519px rgba(0, 0, 0, 0.0303704), 0px 62.7852px 25.4815px rgba(0, 0, 0, 0.0242963), 0px 32.6px 13px rgba(0, 0, 0, 0.02), 0px 13.2815px 6.51852px rgba(0, 0, 0, 0.0157037), 0px 3.01852px 3.14815px rgba(0, 0, 0, 0.00962963);
+    display: flex;
+    padding: 25px 45px;
+    // .form-subscribe__content
+    &__content {
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    // .form-subscribe__label
+
+    &__label {
+        display: block;
+        margin-bottom: 10px;
+        font-style: normal;
+        font-size: 17px;
+        color: #31353B;
+        opacity: 20%;
+    }
+
+    // .form-subscribe__input
+
+    &__input {
+        flex: 1 1 auto;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 144.2%;
+        letter-spacing: 0.02em;
+        color: #31353B;
+        border: none;
+        width: 100%;
+    }
+
+    // .form-subscribe__button
+
+    &__button {
+        background: $btnBg;
+        box-shadow: 0px 100px 80px rgba(248, 90, 71, 0.07), 0px 64.8148px 46.8519px rgba(248, 90, 71, 0.0531481), 0px 38.5185px 25.4815px rgba(248, 90, 71, 0.0425185), 0px 20px 13px rgba(248, 90, 71, 0.035), 0px 8.14815px 6.51852px rgba(248, 90, 71, 0.0274815), 0px 1.85185px 3.14815px rgba(248, 90, 71, 0.0168519);
+        transition: all 0.2s ease 0s;
+        &:hover {
+            background: $btnHvr;
+        }
+        border: none;
+        font-weight: 500;
+        font-size: 19px;
+        line-height: 144.2%;
+        color: #fff;
+        letter-spacing: 0.02em;
+
+        height: 72px;
+        padding: 10px 40px;
+
+        cursor: pointer;
+    }
+}
+
+@media (max-width: ($md3+px)){
+    .form-subscribe {
+        margin: 0px -15px;
+        padding: 15px;
+        flex-direction: column;
+    }
+}
+
+// ===============================
+@media (max-width: ($md2+px)){
+    .subscribe {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+}
+@media (max-width: ($md3+px)){
+    .subscribe {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+    .subscribe__title {
+        font-size: 35px;
+        line-height: 50px;
+    }
+}
+
+@media (max-width: ($md4+px)){
+    .subscribe__title {
+        font-size: 30px;
+        line-height: 50px;
+    }
+}
+// ===============================
+
