@@ -51,7 +51,7 @@
     &__arrow.swiper-button-prev, 
     &__arrow.swiper-button-next {
         position: static;
-        background: url('/img/icons/arrowR.svg') 0 0 / 103% no-repeat;
+        background: url('../img/icons/arrowR.svg') 0 0 / 103% no-repeat;
         height: 19px;
         width: 11px;
         transition: all 0.3s ease 0s;
@@ -248,7 +248,7 @@
     .form-main-block {
         display: block;
         overflow: hidden;
-        background: #fff url('/img/icons/house.svg') 33px 23px no-repeat;
+        background: #fff url('../img/icons/house.svg') 33px 23px no-repeat;
         &__button {
             width: 100%;
             height: 60px;
