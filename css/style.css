@@ -57,7 +57,8 @@ body {
 }
 @media (max-width: 768.98px) {
   [class*=__container] {
-    padding: 0px 15px;
+    padding-left: 15px;
+    padding-right: 15px;
     max-width: none;
   }
 }
@@ -93,7 +94,6 @@ body {
         -ms-flex-direction: column;
             flex-direction: column;
     min-height: 0;
-    padding-top: 20px;
   }
 }
 
@@ -410,10 +410,6 @@ body {
 
   .content-main-block__text {
     font-size: 15px;
-  }
-
-  .body-main-block__content {
-    padding-top: 150px;
   }
 
   .form-main-block {
@@ -1048,7 +1044,8 @@ body {
 @media (max-width: 767.98px) {
   [class*=__container] {
     max-width: none;
-    padding: 0px 15px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 /* ================================ */
