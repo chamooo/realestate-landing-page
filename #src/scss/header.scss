@@ -20,17 +20,11 @@
         &__container {
             flex-direction: column;
             min-height: 0;
+            padding-top: 20px;
         }
     }
 
-    // .header__logo
-    &__logo {
-        
-    }
 
-    // .header__menu
-    &__menu {
-    }
 }
 .logo {
     font-weight: 800;
@@ -54,10 +48,7 @@
             justify-content: center;
         }
     }
-    // .menu__item
-    &__item {
-        
-    }
+
 
     // .menu__link
     &__link {
